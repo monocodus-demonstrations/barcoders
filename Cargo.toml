@@ -1,4 +1,25 @@
 [package]
 name = "barcoders"
-version = "0.1.0"
-authors = ["Andrew Buntine Of Doom <bunts@hhd.com.au>"]
+version = "1.0.1"
+authors = ["Andrew Buntine <info@bunts.io>"]
+description = "A barcode-encoding library"
+homepage = "https://github.com/buntine/barcoders"
+repository = "https://github.com/buntine/barcoders"
+documentation = "https://docs.rs/barcoders"
+readme = "README.md"
+keywords = ["barcode", "barcodes", "barcode-encoding"]
+license = "MIT OR Apache-2.0"
+exclude = [
+    "media/*",
+    "TODO",
+]
+
+[features]
+ascii = []
+json = []
+svg = []
+dev = ["clippy"]
+
+[dependencies]
+image = {version = "0.22", optional = true}
+clippy = {version = "0.0.166", optional = true}
